@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Machinery Rental & Operations Management ERP with Digital Logsheet Generation
 
 An enterprise, full-stack web application for heavy machinery rental, fleet deployment tracking, site operations, and digital logsheet lifecycle management inspired by **Orecs.in**.
@@ -177,3 +178,6 @@ For Celery background workers:
 celery -A machinery_erp worker -l info
 ```
 
+=======
+# machinery-rental-erp2
+>>>>>>> e5b57cd25d1f2261814500ac0df416bac831ca4a
