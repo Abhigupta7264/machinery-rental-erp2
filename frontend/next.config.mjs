@@ -1,16 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Support image domains or API proxy if needed
   async rewrites() {
+    const backendTarget = process.env.BACKEND_INTERNAL_URL || 'http://127.0.0.1:8000';
     return [
       {
-        source: '/api/backend/:path*',
-        destination: 'http://127.0.0.1:8000/api/:path*',
+        source: '/api/:path*',
+        destination: `${backendTarget}/api/:path*`,
       },
     ];
   },
 };
 
 export default nextConfig;
-

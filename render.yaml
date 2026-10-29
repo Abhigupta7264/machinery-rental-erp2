@@ -8,9 +8,12 @@ services:
   - type: web
     name: machinery-erp-backend
     runtime: python
-    buildCommand: cd backend && pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate && python manage.py seed_data
-    startCommand: cd backend && gunicorn machinery_erp.wsgi:application --bind 0.0.0.0:$PORT
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate && python manage.py seed_data
+    startCommand: gunicorn machinery_erp.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
       - key: USE_POSTGRES
         value: "True"
       - key: DATABASE_URL
@@ -21,4 +24,3 @@ services:
         generateValue: true
       - key: DEBUG
         value: "False"
-
