@@ -68,7 +68,7 @@ export default function DashboardPage() {
     fetchMetrics();
     api.getSites()
       .then((res: any) => setSites(Array.isArray(res) ? res : res.results || []))
-      .catch(() => {});
+      .catch(() => { });
   }, [router]);
 
   const handleApplyFilter = (e?: React.FormEvent) => {
