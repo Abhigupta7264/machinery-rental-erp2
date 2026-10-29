@@ -18,6 +18,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy backend application
 COPY backend/ /app/
 
+# Ensure full read/write permissions for Hugging Face non-root user (UID 1000)
+RUN chmod -R 777 /app
+
 # Collect static files
 RUN python manage.py collectstatic --no-input
 

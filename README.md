@@ -1,4 +1,12 @@
-<<<<<<< HEAD
+---
+title: Machinery ERP Backend
+emoji: 🚜
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+---
+
 # Machinery Rental & Operations Management ERP with Digital Logsheet Generation
 
 An enterprise, full-stack web application for heavy machinery rental, fleet deployment tracking, site operations, and digital logsheet lifecycle management inspired by **Orecs.in**.
@@ -172,12 +180,3 @@ DB_PORT=5432
 CELERY_BROKER_URL=redis://127.0.0.1:6379/0
 CELERY_ALWAYS_EAGER=False
 ```
-
-For Celery background workers:
-```powershell
-celery -A machinery_erp worker -l info
-```
-
-=======
-# machinery-rental-erp2
->>>>>>> e5b57cd25d1f2261814500ac0df416bac831ca4a
