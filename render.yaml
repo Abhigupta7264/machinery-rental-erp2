@@ -21,3 +21,4 @@ services:
         generateValue: true
       - key: DEBUG
         value: "False"
+

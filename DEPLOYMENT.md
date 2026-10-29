@@ -105,3 +105,4 @@ If you want to open and test the application on your **mobile phone immediately*
 
 4. Connect your mobile phone to the same Wi-Fi network and open:
    `http://YOUR_COMPUTER_IP:3000` (e.g. `http://192.168.1.45:3000`)
+
